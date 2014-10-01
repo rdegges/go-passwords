@@ -63,7 +63,51 @@ $ go get github.com/rdegges/go-passwords
 
 ## Usage
 
-TODO
+Using go-passwords is simple.
+
+
+### Importing
+
+Before you can use go-passwords, you need to import the library:
+
+```go
+import (
+    "github.com/rdegges/go-passwords"
+)
+```
+
+
+### Hashing Passwords
+
+When you are receiving a user password for the first time (*this typically
+happens when a user is creating an account on your website*), you'll want to
+immediately take the user's plain text password and hash it by doing the
+following:
+
+```go
+password := passwords.Hash("some password in plain text")
+```
+
+By immediately hashing the password as soon as you receive it, you'll minimize
+the risk of leaking the plain text password.
+
+The resulting `password` variable can be safely stored in your user database.
+
+
+### Verifying Passwords
+
+When a user wants to log into their account, they'll supply you with their
+plain text password again.
+
+You will then retrieve the previously stored user password from the database,
+and do the following to check and see whether the passwords match:
+
+```go
+success := passwords.Verify(plainTextPassword, hashedPassword)
+```
+
+If the two passwords match, `success` will be true -- otherwise `success` will
+be false.
 
 
 ## Changelog
