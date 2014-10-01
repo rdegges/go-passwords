@@ -52,6 +52,30 @@ pure Go based on the [scrypt (pdf)][] specification published by
 [Colin Percival][].
 
 
+## Installation
+
+You can install this library by running:
+
+```console
+$ go get github.com/rdegges/go-passwords
+```
+
+
+## Usage
+
+TODO
+
+
+## Changelog
+
+TODO
+
+
+## Upgrading
+
+TODO
+
+
   [@rdegges]: https://twitter.com/rdegges "Randall Degges on Twitter"
   [scrypt (pdf)]: http://www.tarsnap.com/scrypt/scrypt.pdf "scrypt pdf"
   [go.crypto]: https://code.google.com/p/go/source/browse?repo=crypto "go.crypto"
